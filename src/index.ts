@@ -33,6 +33,7 @@ app.get('/murid', async (c : Context) => {
         reject(c.json({error : 'Error fetching murid'}, 500));
         return;
       }
+      console.log('Data Murid :', result)
       resolve(c.json({murid : result}, 200));
     })
   })
